@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Hood Family Values | Annual Family Remix Reunion</title>
+<meta name="description" content="Hood Family Values — One Family. Many Branches. Forever Connected.">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="topbar">
+<a class="brand" href="#home"><img src="assets/hood-family-values-logo.png" alt="Hood Family Values"></a>
+<nav><a href="#home">Home</a><a href="#tree">Family Tree</a><a href="#directory">Family Directory</a><a href="#photos">Photos</a><a href="#reunion">Reunion</a><a href="#announcements">Announcements</a></nav>
+<div class="top-actions"><button id="searchBtn">⌕</button><button id="loginBtn">Log In</button><button class="gold-btn" id="signupBtn">Sign Up</button><span id="userBadge" class="user-badge"></span></div>
+<button class="mobile-menu" id="mobileMenu">☰</button>
+</header>
+<main id="home">
+<section class="hero"><div class="hero-brand"><img src="assets/hood-family-values-logo.png" alt=""></div><div class="hero-copy">
+<div class="eyebrow">ONE FAMILY • MANY BRANCHES • FOREVER CONNECTED</div><h1>Annual Family Remix Reunion</h1><h2>Our Mission</h2><p>Bring our family together, celebrate our roots, build stronger connections, and create lasting memories for generations to come.</p>
+<div class="hero-buttons"><button class="gold-btn" onclick="requireAuth('createProfile')">Create Your Profile</button><button class="outline-btn" onclick="scrollToSection('tree')">Explore Family Tree</button></div>
+</div><div class="hero-family"><div class="family-silhouette">Family<br><span>is everything</span></div></div></section>
+<section class="feature-strip">
+<article><span>♔</span><div><b>Build Your Family Tree</b><small>Add family members and see your connections grow.</small></div></article>
+<article><span>◉</span><div><b>Create Your Profile</b><small>Upload your photo and share your story.</small></div></article>
+<article><span>▣</span><div><b>Share Photos</b><small>Keep reunion memories in one family album.</small></div></article>
+<article><span>♟</span><div><b>Stay Connected</b><small>Get announcements and reunion details.</small></div></article>
+<article><span>♡</span><div><b>Preserve Our Legacy</b><small>Keep our family history alive.</small></div></article>
+</section>
+<section class="tree-section" id="tree">
+<aside class="side-card"><div class="brush-title">Family Tree</div>
+<button class="primary-action" onclick="scrollToSection('tree')">♣ View Family Tree</button><button onclick="openMemberModal()">⊕ Add Family Member</button><button onclick="openProfileModal()">● My Profile</button><button onclick="openDirectory()">☷ Family Directory</button>
+<div class="member-box" id="memberBox"><strong>Welcome</strong><p>Create your account to join the connected family tree.</p><button class="gold-btn" onclick="openAuth('login')">Log In</button></div></aside>
+<div class="tree-wrap"><div class="section-title">Our Family Tree</div><div class="tree-canvas" id="treeCanvas"><div class="loading">Loading the family tree…</div></div></div>
+<aside class="side-card quick"><div class="brush-title">Quick Actions</div><button onclick="openMemberModal()">♙ Add Family Member</button><button onclick="openPhotoModal()">▣ Upload Photo</button><button onclick="openProfileModal()">✎ Update Profile</button><button onclick="openDirectory()">☷ View Family Directory</button><button onclick="openInfo('reunion')">▣ Reunion Information</button>
+<div class="snapshot"><h3>Family Snapshot</h3><p><span>Total Members</span><b id="memberCount">—</b></p><p><span>Generations</span><b id="generationCount">—</b></p><p><span>Photos</span><b id="photoCount">—</b></p><div class="signature">Stronger Together<br>Always ♡</div></div></aside>
+</section>
+<section class="content-grid">
+<article class="content-card" id="photos"><div class="card-icon">▧</div><h3>Family Photos</h3><p>View and share special moments.</p><button onclick="openPhotoModal()">Open Family Album</button></article>
+<article class="content-card" id="reunion"><div class="card-icon">▦</div><h3>Reunion</h3><p>Dates, location, RSVP and more.</p><button onclick="openInfo('reunion')">View Details</button></article>
+<article class="content-card" id="announcements"><div class="card-icon">⚑</div><h3>Announcements</h3><p>Stay informed with family news.</p><button onclick="openInfo('announcements')">View All</button></article>
+<article class="content-card" id="directory"><div class="card-icon">♧</div><h3>Family Directory</h3><p>Find and connect with family members.</p><button onclick="openDirectory()">Search Now</button></article>
+<article class="content-card"><div class="card-icon">▣</div><h3>Upload Photos</h3><p>Add your photos to the family album.</p><button onclick="openPhotoModal()">Upload Now</button></article>
+</section>
+</main>
+<footer><div class="footer-brand">Hood Family Values</div><div>Annual Family Remix Reunion &nbsp; | &nbsp; Family • Love • Legacy • Forever</div><div>♔ One Family. Many Branches. Forever Connected.</div></footer>
+<div class="modal-backdrop" id="modalBackdrop"><div class="modal"><button class="close" onclick="closeModal()">×</button><div id="modalContent"></div></div></div>
+<script type="module" src="app.js"></script>
+</body></html>
